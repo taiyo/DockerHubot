@@ -13,7 +13,7 @@
     "hubot-hello-world": "github:bouzuya/hubot-hello-world",
     "hubot-help": "^0.1.3",
     "hubot-heroku-keepalive": "^1.0.2",
-    "hubot-hotpepper": "^0.1.4",
+    "hubot-hotpepper": "github:taiyo/hubot-hotpepper",
     "hubot-maps": "0.0.2",
     "hubot-pugme": "^0.1.0",
     "hubot-redis-brain": "0.0.3",
