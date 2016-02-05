@@ -58,7 +58,8 @@ module.exports = (robot) ->
 
     url = process.env.BACKLOG_URL + "/api/v2/issues"
     robot.http(url)
+      .query(form)
       .header('Content-Type', 'application/x-www-form-urlencoded')
-      .post(form) (err, res, body) ->
+      .post() (err, res, body) ->
         if !err
           console.log body
