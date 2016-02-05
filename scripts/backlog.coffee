@@ -47,3 +47,18 @@ module.exports = (robot) ->
     catch error
       console.log error
       robot.send
+
+  robot.respond /backlog\s+(.+)$/i, (msg) ->
+    form =
+      apiKey: process.env.BACKLOG_API_KEY
+      projectId: process.env.BACKLOG_PROJECT_ID
+      summary: msg.match[1]
+      issueTypeId: 184019
+      priorityId: 3
+
+    url = process.env.BACKLOG_URL + "/api/v2/issues"
+    robot.http(url)
+      .header('Content-Type', 'application/x-www-form-urlencoded')
+      .post(form) (err, res, body) ->
+        if !err
+          console.log body

@@ -24,4 +24,8 @@ user > hubot 記念日
 hubot > 記念日Counting.png
 ```
 
-- [CountingBottleDocker](https://github.com/taiyo/CountingBottleDocker)で画像生成用サーバーが動作していないといけない。
+- [CountingBottleDocker](https://github.com/taiyo/CountingBottleDocker)で画像生成用サーバーが動作していないと動作しない。
+
+## Backlog通知
+
+## Backlog課題登録
