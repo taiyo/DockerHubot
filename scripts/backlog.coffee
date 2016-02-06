@@ -62,5 +62,7 @@ module.exports = (robot) ->
       .header('Content-Type', 'application/x-www-form-urlencoded')
       .post() (err, res, body) ->
         if !err
-          console.log body
-          robot.send "課題を追加しました：" + "#{process.env.BACKLOG_URL}/view/#{body.issueKey}"
+          json = JSON.parse body
+          console.log json
+          url = "#{process.env.BACKLOG_URL}/view/#{body.issueKey}"
+          robot.send "課題を追加しました：" + url
