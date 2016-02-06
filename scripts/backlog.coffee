@@ -63,3 +63,4 @@ module.exports = (robot) ->
       .post() (err, res, body) ->
         if !err
           console.log body
+          robot.send "課題を追加しました：" + "#{process.env.BACKLOG_URL}/view/#{body.issueKey}"
