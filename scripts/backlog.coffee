@@ -66,4 +66,4 @@ module.exports = (robot) ->
           console.log json
           url = process.env.BACKLOG_URL + "/view/" + json.issueKey
           message = "課題を追加しました：" + url
-          robot.send message
+          msg.send message
