@@ -64,5 +64,6 @@ module.exports = (robot) ->
         if !err
           json = JSON.parse body
           console.log json
-          url = "#{process.env.BACKLOG_URL}/view/#{body.issueKey}"
-          robot.send "課題を追加しました：" + url
+          url = process.env.BACKLOG_URL + "/view/" + body.issueKey
+          message = "課題を追加しました：" + url
+          robot.send message
